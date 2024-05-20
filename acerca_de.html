@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mi portfolio</title>
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+    <style>
+        body{
+            background-color: rgb(14, 14, 14);
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding:0;
+            color: #ffffff;
+            background: rgb(63,94,251);
+            background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+        }
+
+        #inicio{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 50px 10px;
+            text-align: left;
+          
+
+        }
+        #inicio h1{
+            font-size: 40px;
+            margin-bottom: 5px;
+        }
+        #inicio h2{
+            font-size: 20px;
+            font-weight: normal;
+           
+           color: aqua;
+            
+        }
+       
+        #inicio img{
+            max-width: 300px;
+            border-radius: 50%;
+            margin-left: 20px;
+        }
+        header {
+            
+            color: #ffffff;
+            padding: 40px ;
+            text-align: center;
+            
+
+            
+
+
+        }
+        header nav{
+            display: inline-block;
+            width: 100%;
+            background-color: #222;
+            background: rgb(63,94,251);
+            background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            
+        }
+        header nav ul li{
+            display: inline;
+            margin-right: 10px;
+            margin-left: 10px;
+
+        }
+        header nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+            
+        }
+        section {
+            padding: 20px;
+            margin: 0 10 px;
+            text-align: left;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            min-height: 70vh;
+
+
+        }
+       
+        
+        .contact-info{
+            display: flex;
+            flex-direction: row;
+            
+            justify-content: space-around;
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 600px;
+            margin: 40px auto;
+
+        }
+        .contact-colum{
+            display: flex;
+            flex-direction: column;
+            width: 48%;
+            margin: 0 15%;
+        }
+        .contact-item{
+            width: 100%;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0,1);
+            border-radius: 10px;
+            background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+
+        }
+        .contact-info h3{
+            font-size: 16px;
+            color: #ffffff;
+            margin: 5px 0;
+        }
+        .contact-info p{
+            font-size: 14px;
+            color: #fff;
+        }
+        .sobre-mi-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            padding: 50px 10px;
+            text-align: right;
+           
+           
+        }
+
+        .sobre-mi-texto {
+            flex: 3; 
+            order: 1;
+            padding-right: 50px; 
+            text-align: justify;
+            max-width: 1000px;
+            
+            
+           
+        }
+        .sobre-mi-imagen {
+            flex: 1; 
+            padding-top:20px;
+            order: 1;
+            padding-right: 20px;
+            
+        }
+
+        .sobre-mi-imagen img {
+            width: 90%; 
+            height: auto; 
+            border-radius: 50%;
+            max-width: 200px;
+            display: block;
+            margin: 0 auto;
+        }
+       
+        
+        @media (max-width: 800px) {
+        .sobre-mi-container {
+            flex-direction: column; /* Alinea los elementos verticalmente */
+            text-align: center;
+        }
+
+        .sobre-mi-texto, .sobre-mi-imagen {
+            order: 0;
+            padding-left: 0; /* Elimina el padding a la izquierda en dispositivos móviles */
+            max-width: 100%; /* Permite que cada elemento use el ancho completo */
+        }
+
+        .sobre-mi-imagen img {
+            max-width: 150px; /* Reduce aún más el tamaño de la imagen en dispositivos móviles */
+        }
+
+        .sobre-mi-texto {
+            padding-top: 20px; /* Añade espacio encima del texto cuando está debajo de la imagen */
+        }
+    }
+
+       
+       
+    </style>
+<body>
+    <header>
+        <div class="titulos-mi">
+            
+            <nav>
+                <ul>
+                    <li><a href="#inicio" onclick="mostrarSeccion('inicio')">Inicio</a></li>
+                    <li><a href="#sobre-mi" onclick="mostrarSeccion('sobre-mi')">Sobre mi</a></li>
+                    <li><a href="#proyectos"onclick= "mostrarSeccion('proyectos')">Proyectos</a></li>
+                    <li><a href="#contacto"onclick= "mostrarSeccion('contacto')">contacto</a></li>
+                </ul>
+           </nav>
+        </div>
+
+    </header>
+    <section id="inicio">
+        <div>
+            <h1>Hola! soy Sofia Guanes</h1>
+            <h2> fullstack web Developer</h2>
+        </div>
+    
+        <img src="img/portfolio.jpg" style="max-width: 300px;">
+      
+        
+    </section>
+    <section id="sobre-mi" style="display:none;">
+        <div class="sobre-mi-container">
+            <div class="sobre-mi-imagen">
+                <img src="img/portfolio.jpg">
+            </div>
+        
+            <div class="sobre-mi-texto">
+                <h2>Sobre Mi</h2>
+                <p>Hola! Soy Sofia Guanes.</p>
+                <p> Una apasionada diseñadora de pagianas web, Mi enfoque se centra en diseñar experiencias de usuario que no solo se vean bien, sino que también faciliten la interacción y el acceso a la informacion. Me encanta aprender nuevas cosas y nuevas formas para mejorar mi codigo. </p>
+                <p> Desde proyectos pequeños hasta grandes plataformas corporativas, me dedico a transformar ideas
+                    en realidades digitales que destacan. Mi proceso creativo es colaborativo y meticuloso, asegurando que cada detalle contribuya al objetivo final del proyecto. </p>
+                <p>Especializada en herramientas o tecnologías especificas, como HTML, CSS, JavaScript y Photoshop. Estoy constantemente actualizandome sobre las ultimas tendencias y 
+                    técnicas en diseño web para ofrecer soluciones innovadoras y a la vanguardia.
+                </p>
+                <p> Si estas buscando a alguien con creatividad y con disiplina para llevar tu proyecto al siguiente nivel, estaria encantada de contactarme contigo.</p>
+            </div>
+    
+           
+        </div>
+    </section>
+    <section id="proyectos" style="display: none;">
+        <div>
+
+        </div>
+
+    </section>
+    <section id="contacto" style="display: none;">
+        <div class=" contact-info">
+            <div class="contact-colum">
+                <div class="contact-item">
+                    <h3>Mail</h3>
+                    <p>sofiaguanes@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Celular</h3>
+                    <p>+595 971 873 415</p>
+                </div>
+            </div>
+            <div class="contact-colum">
+                <div class="contact-item">
+                    <h3>Edad</h3>
+                    <p>21 años</p>
+                </div>
+                <div class="contact-item">
+                    <h3>País</h3>
+                    <p>Paraguay,Asunción</p>
+                </div>
+            
+            </div>
+            
+        
+
+        </div>
+
+    </section>
+    
+    
+    <script>
+        function mostrarSeccion(id) {
+            var secciones = ['inicio','sobre-mi','proyectos','contacto'];
+            secciones.forEach(function(seccion) {
+                document.getElementById(seccion).style.display = 'none';
+            });
+            document.getElementById(id).style.display= 'flex';
+            
+        }
+    </script>
+</body>
+
+</html>
+       <!--<img src="img/corazon.jpeg" alt= "foto sofi"/> -->
+        
+
+</html>
